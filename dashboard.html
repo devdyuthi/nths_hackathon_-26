@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Meal Match</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <section class="portal">
+    <aside class="sidebar">
+      <h2>Meal Match</h2>
+
+      <div class="nav-links">
+        <button class="nav-link active" data-section="home">Home</button>
+        <button class="nav-link" data-section="donations">Donations</button>
+        <button class="nav-link" data-section="stats">Stats</button>
+        <button class="nav-link" data-section="profile">Profile</button>
+      </div>
+
+      <div class="sidebar-actions">
+        <a class="button secondary" href="login.html">Sign Out</a>
+      </div>
+    </aside>
+
+    <main class="portal-main">
+      <div id="portalContent"></div>
+    </main>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
