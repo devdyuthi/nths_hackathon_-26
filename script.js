@@ -889,8 +889,45 @@ function renderDashboard() {
   bindDashboardEvents();
 }
 
+/**
+ * CONSOLIDATED LOGIN & SIGNUP HANDLER
+ * (Replaces all previous login versions)
+ */
+function setupAuthHandlers() {
+  const loginForm = document.getElementById("loginForm");
+  const orgForm = document.getElementById("organizationSignupForm");
+  const donorForm = document.getElementById("donorSignupForm");
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const emailInput = document.getElementById("loginEmail").value.trim().toLowerCase();
+
+      // Check current appState for match
+      const isOrg = emailInput === appState.organizationUser.email.toLowerCase();
+      const isDonor = emailInput === appState.donorUser.email.toLowerCase();
+
+      if (isOrg) {
+        localStorage.setItem("mealMatchRole", "organization");
+        saveState();
+        window.location.href = "dashboard.html";
+      } else if (isDonor) {
+        localStorage.setItem("mealMatchRole", "donor");
+        saveState();
+        window.location.href = "dashboard.html";
+      } else {
+        alert("Email not recognized. Try 'maria@harvesttablekitchen.org' or 'jordan@hopepantry.org'");
+      }
+    });
+  }
+
+  if (orgForm) orgForm.addEventListener("submit", (e) => createAccount(e, "organization"));
+  if (donorForm) donorForm.addEventListener("submit", (e) => createAccount(e, "donor"));
+}
+
+// --- INITIALIZATION ---
 document.addEventListener("DOMContentLoaded", () => {
   loadState();
-  setupLoginPage();
+  setupAuthHandlers();
   renderDashboard();
 });

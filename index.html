@@ -6,13 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meal Match</title>
   <link rel="stylesheet" href="index.css" />
+  <script src="index.js" defer></script>
 </head>
 
 <body>
   <section class="landing">
     <header class="topbar">
       <div class="brand">
-        <span class="brand-mark">●</span>
+        <img class="brand-mark" src="./images/NTHS_hackathon_26-Photoroom.png">
         <div>
           <div class="brand-name">Meal Match</div>
           <small>Matching extra food with community need.</small>
@@ -27,7 +28,7 @@
       </nav>
 
       <div class="topbar-actions">
-        <a class="button secondary" href="login.html">Log In</a>
+        <a class="button secondary" href="repeatlogin.html">Log In</a>
         <a class="button primary" href="login.html">Get Started</a>
       </div>
     </header>
@@ -45,26 +46,31 @@
       </p>
       <div class="hero-actions">
         <a class="button primary large" href="login.html">Get Started</a>
-        <a class="button text-link" href="login.html">Log In</a>
+        <a class="button text-link" href="repeatlogin.html">Log In</a>
       </div>
     </section>
 
     <section id="impact" class="impact-strip">
-      <div class="impact-stat">
-        <strong>42,000+</strong>
-        <span>Users served</span>
-      </div>
-      <div class="impact-stat">
-        <strong>35,000+</strong>
-        <span>Meals delivered</span>
-      </div>
-      <div class="impact-stat">
-        <strong>127</strong>
-        <span>Partner organizations</span>
-      </div>
-      <div class="impact-stat">
-        <strong>92%</strong>
-        <span>Slot fulfillment rate</span>
+      <div class="stats">
+        <div class="stat">
+          <h1 class="counter" data-target="42000" data-suffix="+">0</h1>
+          <p>Users Served</p>
+        </div>
+
+        <div class="stat">
+          <h1 class="counter" data-target="35000" data-suffix="+">0</h1>
+          <p>Meals Delivered</p>
+        </div>
+
+        <div class="stat">
+          <h1 class="counter" data-target="127">0</h1>
+          <p>Partner Organizations </p>
+        </div>
+
+        <div class="stat">
+          <h1 class="counter" data-target="92" data-suffix="%">0</h1>
+          <p>Slot Fulfillment Rate</p>
+        </div>
       </div>
     </section>
 

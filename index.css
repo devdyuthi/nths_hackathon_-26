@@ -55,15 +55,8 @@ a {
 }
 
 .brand-mark {
-  width: 34px;
-  height: 34px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  background: linear-gradient(to bottom right, #7ca37f, #39533f);
-  color: white;
-  font-size: 0.8rem;
+  width: 80px;      
+  height: auto;
 }
 
 .brand-name {
@@ -315,4 +308,59 @@ a {
   .three-col-grid {
     grid-template-columns: 1fr;
   }
+}
+.stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.stat {
+  font-family: Arial, sans-serif;
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #053001;
+}
+.stats {
+  display: flex;             
+  justify-content: space-around; 
+  align-items: center;      
+  flex-wrap: wrap;           
+  text-align: center;        
+  margin-top: 50px;
+  gap: 20px;                 
+}
+
+.stat {
+  flex: 1 1 150px;          
+}
+
+.impact-strip .stats {
+  display: flex !important;      
+  justify-content: space-around;  
+  align-items: center;           
+  flex-wrap: wrap;                
+  text-align: center;
+  gap: 20px;                      
+}
+
+
+.impact-strip .stat {
+  flex: 1 1 150px;               
+}
+
+.impact-strip {
+  display: block; 
+}
+
+.impact-strip .stats {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; 
+  gap: 20px; 
 }
